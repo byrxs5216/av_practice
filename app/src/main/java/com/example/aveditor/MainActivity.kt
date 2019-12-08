@@ -3,7 +3,7 @@ package com.example.aveditor
 import android.opengl.GLSurfaceView
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.aveditor.gllearning.MyTriangleShader
+import com.example.aveditor.gllearning.MyTriangleRender
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         val glSurfaceView = GLSurfaceView(this)
         glSurfaceView.apply {
             setEGLContextClientVersion(2)
-            setRenderer(MyTriangleShader())
+            setRenderer(MyTriangleRender())
         }
 
         setContentView(R.layout.activity_main)

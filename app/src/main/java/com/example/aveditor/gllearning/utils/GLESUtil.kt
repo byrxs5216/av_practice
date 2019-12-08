@@ -1,9 +1,6 @@
-package com.example.aveditor.gllearning
+package com.example.aveditor.gllearning.utils
 
 import android.os.Build
-import android.content.pm.ConfigurationInfo
-import android.content.Context.ACTIVITY_SERVICE
-import androidx.core.content.ContextCompat.getSystemService
 import android.app.ActivityManager
 import android.content.Context
 
@@ -11,7 +8,7 @@ import android.content.Context
 /**
  * Created by xusheng on 2019-12-08.
  */
-object GlUtil {
+object GLESUtil {
     /**
      * open gl 2的版本
      */
@@ -42,4 +39,7 @@ object GlUtil {
         }
 
     }
+
+
+
 }

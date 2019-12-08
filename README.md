@@ -1,0 +1,3 @@
+# av_practice
+安卓音视频开发代码库
+主要是记录自己在安卓音视频开发中的练习代码记录，包括ffmpeg和OpenglEs

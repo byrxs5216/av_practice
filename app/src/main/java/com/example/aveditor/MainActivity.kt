@@ -8,18 +8,23 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    private var triangleRender: MyTriangleRender? = null
+    private var glSurfaceView: GLSurfaceView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val glSurfaceView = GLSurfaceView(this)
-        glSurfaceView.apply {
-            setEGLContextClientVersion(2)
-            setRenderer(MyTriangleRender())
-        }
-
         setContentView(R.layout.activity_main)
+        glSurfaceView = findViewById(R.id.gl_surface_view)
+        triangleRender = MyTriangleRender(this)
+        glSurfaceView?.apply {
+            setEGLContextClientVersion(2)
+            setRenderer(triangleRender)
+        }
+    }
 
-        // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+    override fun onDestroy() {
+        super.onDestroy()
+        triangleRender?.release()
     }
 
     /**

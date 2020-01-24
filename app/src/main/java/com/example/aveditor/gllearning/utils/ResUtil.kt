@@ -1,6 +1,7 @@
 package com.example.aveditor.gllearning.utils
 
 import android.content.Context
+import android.util.Log
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStream
@@ -25,11 +26,15 @@ object ResUtil {
             open = context.assets.open(shaderCodeName)
             val bufferedReader = BufferedReader(InputStreamReader(open))
             var line: String? = null
-            bufferedReader.readLine()?.let { line ->
-                body.append(line)
-                body.append("\n")
-            }
-        } catch (e: IOException) {
+            do {
+                line = bufferedReader.readLine()
+                if (line != null) {
+                    body.append(line)
+                    body.append("\n")
+                }
+            } while (line != null)
+        } catch (e: Throwable) {
+            Log.e("xusheng", "error: $e")
             e.printStackTrace()
         }
 

@@ -5,7 +5,7 @@ package com.example.aveditor.gllearning
  */
 object GLSLFileName {
 
-    const val TRIANGLE_FRAGMENT_SHADER = "triangle_fragment_shader"
-    const val TRIANGLE_VERTEXT_SHADER = "triangle_vertext_shader"
+    const val TRIANGLE_FRAGMENT_SHADER = "triangle_fragment_shader.glsl"
+    const val TRIANGLE_VERTEXT_SHADER = "triangle_vertex_shader.glsl"
 
 }

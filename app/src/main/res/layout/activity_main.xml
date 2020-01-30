@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.opengl.GLSurfaceView
-        android:id="@+id/gl_surface_view"
+    <Button
+        android:id="@+id/btnTestOpengl"
+        android:text="测试OpenGl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="60dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnStartRecord"
+        android:text="录制视频"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+    <Button
+        android:id="@+id/btnStartPlay"
+        android:text="播放视频"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+
+</LinearLayout>

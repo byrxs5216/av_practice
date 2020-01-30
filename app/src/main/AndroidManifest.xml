@@ -16,6 +16,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.example.aveditor.recorder.ui.VideoRecordActivity"
+            android:configChanges="screenSize|screenLayout|smallestScreenSize"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.example.aveditor.player.ui.VideoPlayerActivity"
+            android:configChanges="screenSize|screenLayout|smallestScreenSize"
+            android:keepScreenOn="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name="com.example.aveditor.gllearning.ui.TestOpenGLActivity"
+            android:configChanges="screenSize|screenLayout|smallestScreenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
     </application>
 
 </manifest>
